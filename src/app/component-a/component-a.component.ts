@@ -4,7 +4,7 @@ import {Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef} fr
   selector: 'app-component-a',
   templateUrl: './component-a.component.html',
   styleUrls: ['./component-a.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ComponentAComponent implements OnInit {
 
@@ -16,7 +16,7 @@ export class ComponentAComponent implements OnInit {
   ngOnInit(): void {
     this.subscription.subscribe((val: number) => {
       this.number = val;
-      this.changeDetector.markForCheck();
+      //this.changeDetector.markForCheck();
     });
   }
 
